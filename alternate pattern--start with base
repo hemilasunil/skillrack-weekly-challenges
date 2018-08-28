@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+    int x,y,a[1000][1000],i,j;
+    scanf("%d %d",&x,&y);
+    for(i=0;i<x;i++)
+    {
+        if(i%2==0)
+        {
+        for(j=0;j<x;j++)
+        {
+          a[i][j]=y++;
+            
+        }
+        }
+        else
+        {
+            for(j=x-1;j>=0;j--)
+            {
+                a[i][j]=y++;
+            }
+        }
+    }
+    for(i=0;i<x;i++)
+    {
+        for(j=0;j<x;j++)
+        {
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+}
